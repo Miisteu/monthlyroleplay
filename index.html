@@ -6,151 +6,216 @@
 <title>APV | Monthly Roleplay</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+  /* Reset en basis */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
   body {
+    margin: 0; padding: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: #0f172a;
     color: #e0e0e0;
-    margin: 0; padding: 0; line-height: 1.6;
-  }
-  header {
-    background-color: #1e293b;
-    padding: 20px; text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.7);
-  }
-  header h1 {
-    margin: 0;
-    font-weight: 700;
-    font-size: 2.5rem;
-    color: #60a5fa;
-    letter-spacing: 2px;
-  }
-  header p {
-    margin: 5px 0 0 0;
-    font-weight: 400;
-    color: #94a3b8;
-    font-size: 1rem;
-  }
-  main {
-    max-width: 900px;
-    margin: 40px auto;
-    background-color: #1e293b;
-    padding: 30px 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.7);
-  }
-  section {
-    margin-bottom: 40px;
-  }
-  h2 {
-    color: #60a5fa;
-    font-weight: 700;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #60a5fa;
-    padding-bottom: 8px;
-  }
-  article {
-    margin-bottom: 25px;
-  }
-  article h3 {
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin-bottom: 6px;
-    color: #a5b4fc;
-  }
-  article p {
-    margin: 0;
-    color: #cbd5e1;
-    font-size: 1rem;
-    white-space: pre-line;
-  }
-  footer {
-    text-align: center;
-    padding: 20px;
-    color: #64748b;
-    font-size: 0.9rem;
-    background-color: #1e293b;
-    margin-top: 40px;
-    user-select: none;
+    line-height: 1.6;
   }
   a {
     color: #60a5fa;
     text-decoration: none;
   }
-  a:hover {
+  a:hover, a:focus {
     text-decoration: underline;
+  }
+
+  /* Header */
+  header {
+    background-color: #1e293b;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+    color: #60a5fa;
+  }
+  header p {
+    margin: 0.2rem 0 0;
+    color: #94a3b8;
+  }
+
+  /* Layout */
+  .container {
+    max-width: 960px;
+    margin: 2rem auto 4rem;
+    padding: 0 1.5rem;
+  }
+
+  /* Menu */
+  nav {
+    background-color: #1e293b;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+  }
+  nav a {
+    padding: 0.5rem 1rem;
+    background-color: #334155;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  nav a:hover, nav a:focus {
+    background-color: #60a5fa;
+    color: #0f172a;
+  }
+
+  /* Secties */
+  section {
+    margin-bottom: 3rem;
+  }
+  section h2 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #60a5fa;
+    border-bottom: 3px solid #60a5fa;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+  }
+  article {
+    margin-bottom: 1.5rem;
+  }
+  article h3 {
+    font-size: 1.3rem;
+    color: #a5b4fc;
+    margin-bottom: 0.4rem;
+  }
+  article p {
+    color: #cbd5e1;
+    white-space: pre-line;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    color: #64748b;
+    background-color: #1e293b;
+    user-select: none;
+    border-top: 1px solid #334155;
+  }
+
+  /* Scroll behavior smooth */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.8rem;
+    }
+    nav {
+      gap: 0.5rem;
+    }
+    nav a {
+      padding: 0.4rem 0.7rem;
+      font-size: 0.9rem;
+    }
+    section h2 {
+      font-size: 1.5rem;
+    }
   }
 </style>
 </head>
 <body>
+
 <header>
   <h1>APV</h1>
   <p>Monthly Roleplay - FiveM Roleplay Server</p>
 </header>
-<main>
 
-<section>
-  <h2>Algemene Plaatselijke Verordening (APV) Monthly Roleplay</h2>
+<div class="container">
 
-  <article>
-    <h3>Artikel 1 - Samenscholing</h3>
+<nav aria-label="Hoofdstukken en artikelen navigatie">
+  <a href="#hoofdstuk-1">Hoofdstuk 1</a>
+  <a href="#hoofdstuk-2">Hoofdstuk 2</a>
+  <a href="#hoofdstuk-3">Hoofdstuk 3</a>
+  <a href="#slotbepaling">Slotbepaling</a>
+</nav>
+
+<section id="hoofdstuk-1">
+  <h2>Hoofdstuk 1 – Openbare Orde</h2>
+  <article id="artikel-1">
+    <h3>Artikel 1 – Samenscholing</h3>
     <p>Het is verboden om zich op een zodanige wijze te verzamelen dat dit de openbare orde verstoort, met name wanneer de groep uit meer dan vijf personen bestaat.</p>
   </article>
-
-  <article>
-    <h3>Artikel 2 - Openbare dronkenschap</h3>
+  <article id="artikel-2">
+    <h3>Artikel 2 – Openbare dronkenschap</h3>
     <p>Openbare dronkenschap die leidt tot overlast, hinder of gevaar is verboden.</p>
   </article>
-
-  <article>
-    <h3>Artikel 3 - Hinderlijk gedrag</h3>
+  <article id="artikel-3">
+    <h3>Artikel 3 – Hinderlijk gedrag</h3>
     <p>Het is verboden zich zodanig te gedragen dat dit anderen hindert, bedreigt, intimideert of agressief maakt in de openbare ruimte.</p>
   </article>
-
-  <article>
-    <h3>Artikel 4 - Vernieling en beschadiging</h3>
+  <article id="artikel-4">
+    <h3>Artikel 4 – Vernieling en beschadiging</h3>
     <p>Het vernielen, beschadigen of bevuilen van eigendommen, gebouwen, straatmeubilair of openbare plaatsen is verboden.</p>
   </article>
-
-  <article>
-    <h3>Artikel 5 - Straatracen</h3>
-    <p>Illegale straatraces zijn verboden en kunnen leiden tot inbeslagname van voertuigen en strafrechtelijke vervolging.</p>
-  </article>
-
-  <article>
-    <h3>Artikel 6 - Parkeren</h3>
-    <p>Parkeren op stoepen, kruispunten, uitritten of andere verboden plaatsen is niet toegestaan en kan leiden tot boetes en/of wegslepen van voertuigen.</p>
-  </article>
-
-  <article>
-    <h3>Artikel 7 - Wapenbezit</h3>
-    <p>Het is verboden om vuurwapens, messen of andere gevaarlijke wapens zonder vergunning te bezitten of bij zich te dragen in de openbare ruimte.</p>
-  </article>
-
-  <article>
-    <h3>Artikel 8 - Drugsbezit</h3>
-    <p>Het bezit, gebruik, handel of distributie van soft- en harddrugs is verboden en wordt streng bestraft.</p>
-  </article>
-
-  <article>
-    <h3>Artikel 9 - Geluidsoverlast</h3>
-    <p>Het veroorzaken van overmatige geluidsoverlast, bijvoorbeeld door luide muziek of voertuigen, is verboden.</p>
-  </article>
-
-  <article>
-    <h3>Artikel 10 - Overige verboden gedragingen</h3>
-    <p>Gedrag dat de openbare orde verstoort, de veiligheid bedreigt of het welzijn van anderen schaadt, is verboden, ook als dit niet expliciet in andere artikelen is benoemd.</p>
-  </article>
-
-  <article>
-    <h3>Slotbepaling - Regels in het kort</h3>
-    <p>Deze APV is opgesteld om een veilige en plezierige roleplay-omgeving te waarborgen. Overtredingen kunnen leiden tot sancties zoals waarschuwingen, boetes, aanhoudingen, of tijdelijke/permanente bans binnen de Monthly Roleplay server.</p>
-  </article>
-
 </section>
 
-</main>
+<section id="hoofdstuk-2">
+  <h2>Hoofdstuk 2 – Verkeer en Vervoer</h2>
+  <article id="artikel-5">
+    <h3>Artikel 5 – Straatracen</h3>
+    <p>Illegale straatraces zijn verboden en kunnen leiden tot inbeslagname van voertuigen en strafrechtelijke vervolging.</p>
+  </article>
+  <article id="artikel-6">
+    <h3>Artikel 6 – Parkeren</h3>
+    <p>Parkeren op stoepen, kruispunten, uitritten of andere verboden plaatsen is niet toegestaan en kan leiden tot boetes en/of wegslepen van voertuigen.</p>
+  </article>
+  <article id="artikel-7">
+    <h3>Artikel 7 – Verkeersregels</h3>
+    <p>Het niet naleven van verkeersregels kan leiden tot sancties, inclusief boetes of rijverbod.</p>
+  </article>
+</section>
+
+<section id="hoofdstuk-3">
+  <h2>Hoofdstuk 3 – Wapens en Verboden Goederen</h2>
+  <article id="artikel-8">
+    <h3>Artikel 8 – Illegaal wapenbezit</h3>
+    <p>Het is verboden om vuurwapens, messen of andere gevaarlijke wapens zonder vergunning te bezitten of bij zich te dragen in de openbare ruimte.</p>
+  </article>
+  <article id="artikel-9">
+    <h3>Artikel 9 – Drugsbezit</h3>
+    <p>Het bezit, gebruik, handel of distributie van soft- en harddrugs is verboden en wordt streng bestraft.</p>
+  </article>
+  <article id="artikel-10">
+    <h3>Artikel 10 – Geluidsoverlast</h3>
+    <p>Het veroorzaken van overmatige geluidsoverlast, bijvoorbeeld door luide muziek of voertuigen, is verboden.</p>
+  </article>
+</section>
+
+<section id="slotbepaling">
+  <h2>Slotbepaling - Regels in het kort</h2>
+  <article>
+    <p>Deze APV is opgesteld om een veilige en plezierige roleplay-omgeving te waarborgen. Overtredingen kunnen leiden tot sancties zoals waarschuwingen, boetes, aanhoudingen, of tijdelijke/permanente bans binnen de Monthly Roleplay server.</p>
+  </article>
+</section>
+
+</div>
+
 <footer>
   © 2025 Monthly Roleplay | APV opgesteld voor roleplay-doeleinden
 </footer>
+
 </body>
 </html>
